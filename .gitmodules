@@ -13,3 +13,6 @@
 [submodule "components/axp192"]
 	path = components/axp192
 	url = https://github.com/tuupola/axp192
+[submodule "vendor/esp-idf"]
+	path = vendor/esp-idf
+	url = https://github.com/espressif/esp-idf.git
