@@ -38,7 +38,6 @@ void ScalesEventLoop::tare()
 		return;
 
 	m_tareInProgress = true;
-	m_weight = -1;
 	eventPost(Events::Tare);
 }
 
@@ -78,6 +77,7 @@ void ScalesEventLoop::eventHandler(int32_t eventId, void* data)
 	}
 
 	case Tare:
+		m_weight = -1;
 		for (auto& loadcell : m_loadcells)
 			loadcell.tare();
 
